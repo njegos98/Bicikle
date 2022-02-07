@@ -21,6 +21,7 @@ class RezervacijaSeeder extends Seeder
         $array=explode(" ",$user->name);
         $prezime = $array[1];
         $ime = $array[0];
+
         Rezervacija::create([
             "ime"=>$ime,
             "prezime"=> $prezime,
@@ -28,6 +29,16 @@ class RezervacijaSeeder extends Seeder
             "brDana"=>"1",
             "kontakt"=> "0631234356",
             "bicikla_id"=> "1",
+            "user_id"=> $user->id,
+        ]);
+
+        Rezervacija::create([
+            "ime"=>$ime,
+            "prezime"=> $prezime,
+            "datum_preuzimanja"=>"2021-10-02",
+            "brDana"=>"1",
+            "kontakt"=> "0631234586",
+            "bicikla_id"=> "2",
             "user_id"=> $user->id,
         ]);
     }

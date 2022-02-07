@@ -32,5 +32,14 @@ class BiciklaSeeder extends Seeder
             "uzrast"=>"odrasli",
             "cena"=>"15"
         ]);
+
+        Bicikla::create([
+            "model"=>"peugeot",
+            "boja"=>"bela",
+            "materijal"=>"karbon",
+            "stanje"=>"polovna",
+            "uzrast"=>"deca",
+            "cena"=>"15"
+        ]);
     }
 }
